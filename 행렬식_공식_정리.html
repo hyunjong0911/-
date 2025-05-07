@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>행렬식 공식 정리</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
+    <style>
+        body { font-family: sans-serif; padding: 2em; }
+        h2 { margin-top: 1.5em; }
+        .formula { font-size: 1.2em; margin: 0.5em 0; }
+    </style>
+</head>
+<body>
+    <h1>행렬식 공식 정리</h1>
+<h2>1. 2x2 행렬의 행렬식 정의:</h2>
+<div class='formula'>\[A = \begin{bmatrix} a & b \\ c & d \end{bmatrix},\quad \det A = ad - bc\]</div>
+<h2>2. n × n 행렬식의 재귀적 정의:</h2>
+<div class='formula'>\[\det A = \sum_{j=1}^{n} (-1)^{1+j} a_{1j} M_{1j}\]</div>
+<h2>3. 여인수(Cofactor)의 정의:</h2>
+<div class='formula'>\[C_{ij} = (-1)^{i+j} M_{ij}\]</div>
+<h2>4. 라플라스 전개 정리 (i행 기준):</h2>
+<div class='formula'>\[\det A = \sum_{j=1}^{n} a_{ij} C_{ij}\]</div>
+<h2>5. 라플라스 전개 정리 (j열 기준):</h2>
+<div class='formula'>\[\det A = \sum_{i=1}^{n} a_{ij} C_{ij}\]</div>
+<h2>6. 삼각행렬의 행렬식:</h2>
+<div class='formula'>\[\det A = a_{11}a_{22}\cdots a_{nn}\]</div>
+<h2>7. 행렬식의 기본 성질:</h2>
+<div class='formula'>\[\begin{aligned}
+        &\text{0행: } \det A = 0,\quad \text{교환: } \det B = -\det A,\\
+        &\text{동일행: } \det A = 0,\quad \text{스칼라곱: } \det B = k\det A,\\
+        &\text{선형결합: } \det B = \det A
+     \end{aligned}\]</div>
+<h2>8. 기본 행렬의 행렬식:</h2>
+<div class='formula'>\[\begin{aligned}
+        &\text{두 행 교환: } \det E = -1,\\
+        &\text{한 행을 } k \text{배: } \det E = k,\\
+        &\text{한 행 더함: } \det E = 1
+     \end{aligned}\]</div>
+<h2>9. 행렬 곱과 행렬식:</h2>
+<div class='formula'>\[\det(EB) = \det E \cdot \det B,\quad \det(AB) = \det A \cdot \det B\]</div>
+<h2>10. 가역성과 행렬식:</h2>
+<div class='formula'>\[\det A \neq 0 \iff A \text{는 가역}\]</div>
+<h2>11. 스칼라 곱의 행렬식:</h2>
+<div class='formula'>\[\det(kA) = k^n \cdot \det A\]</div>
+<h2>12. 역행렬의 행렬식:</h2>
+<div class='formula'>\[\det(A^{-1}) = \frac{1}{\det A}\]</div>
+<h2>13. 전치행렬의 행렬식:</h2>
+<div class='formula'>\[\det A = \det A^T\]</div>
+<h2>14. 크래머 법칙:</h2>
+<div class='formula'>\[x_i = \frac{\det(A_i(\mathbf{b}))}{\det A}\]</div>
+<h2>15. 수반행렬 정의:</h2>
+<div class='formula'>\[\text{adj}(A) = [C_{ij}]^T = [C_{ji}]\]</div>
+<h2>16. 역행렬과 수반행렬의 관계:</h2>
+<div class='formula'>\[A^{-1} = \frac{1}{\det A} \cdot \text{adj}(A)\]</div>
+
+</body>
+</html>
